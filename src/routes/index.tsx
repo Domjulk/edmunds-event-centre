@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { bookingSchema, eventTypes, type BookingInput } from "@/lib/edmunds-booking-validation";
 import celebration from "@/assets/edmunds-venue-celebration.asset.json";
 import intimateVenue from "@/assets/edmunds-event-details.asset.json";
-import grandMarquee from "@/assets/edmunds-grand-marquee.jpg";
+import grandMarquee from "@/assets/edmunds-grand-marquee.webp";
 
 const phone = "+2349087487034";
 const whatsapp = `https://wa.me/${phone.slice(1)}`;

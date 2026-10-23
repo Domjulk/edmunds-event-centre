@@ -17,7 +17,11 @@ export const bookingSchema = z.object({
     .int("Enter a whole number of guests.")
     .min(1, "At least one guest is required.")
     .max(2000, "Our venue accommodates up to 2,000 guests."),
-  preferredDate: z.string().min(1, "Please choose a preferred date."),
+  preferredDate: z
+    .string()
+    .min(1, "Please choose a preferred date.")
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Please enter a valid date.")
+    .refine((date) => date >= new Date().toISOString().slice(0, 10), "Choose today or a future date."),
 });
 
 export type BookingInput = z.infer<typeof bookingSchema>;
