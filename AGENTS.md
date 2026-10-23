@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Architecture rules
+- Keep the Edmunds one-page experience on the existing home route and share its Zod booking rules with colocated validation tests so the booking limits remain verifiable.
