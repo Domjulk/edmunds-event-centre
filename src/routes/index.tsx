@@ -63,7 +63,13 @@ const reviews = [
 
 function BookingDialog({ className = "", children }: { className?: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
-  const [errors, setErrors] = useState<Partial<Record<keyof BookingInput, string>>>({});
+  const [errors, setErrors] = useState<Record<keyof BookingInput, string | undefined>>({
+    fullName: undefined,
+    phoneNumber: undefined,
+    eventType: undefined,
+    expectedGuests: undefined,
+    preferredDate: undefined,
+  });
   const today = new Date().toISOString().slice(0, 10);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -77,7 +83,13 @@ function BookingDialog({ className = "", children }: { className?: string; child
       preferredDate: form.get("preferredDate"),
     });
     if (!result.success) {
-      const nextErrors: Partial<Record<keyof BookingInput, string>> = {};
+      const nextErrors: Record<keyof BookingInput, string | undefined> = {
+        fullName: undefined,
+        phoneNumber: undefined,
+        eventType: undefined,
+        expectedGuests: undefined,
+        preferredDate: undefined,
+      };
       result.error.issues.forEach((issue) => {
         const key = issue.path[0] as keyof BookingInput;
         if (!nextErrors[key]) nextErrors[key] = issue.message;
