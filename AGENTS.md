@@ -10,4 +10,5 @@
 <!-- LOVABLE:END -->
 
 ## Architecture rules
-- Keep the Edmunds one-page experience on the existing home route and share its Zod booking rules with colocated validation tests so the booking limits remain verifiable.
+- Keep the Midas Worth single-page experience on the existing home route (`src/routes/index.tsx`). Business copy, reviews, opening hours and contact details live in `src/lib/venue-content.ts`; page sections live in `src/components/venue/`.
+- Keep booking rules in `src/lib/booking-validation.ts` with colocated tests in `src/test/booking-validation.test.ts`. Do not invent a guest-capacity limit or other venue claims that have not been supplied.

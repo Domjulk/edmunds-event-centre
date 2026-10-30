@@ -1,6 +1,7 @@
-# Edmunds Event Centre
-- [x] Design the responsive branded venue page and contact navigation.
-- [x] Add venue photography, amenities, reviews, parking details, and map.
-- [x] Add validated inspection enquiries and success notifications.
-- [x] Verify desktop, mobile, booking flow, route, and validation tests.
-- [x] Add per-page sharing and title metadata.
+# Midas Worth Event Place, Abuja
+- [x] Replace the former venue identity and homepage copy with the supplied Midas Worth details.
+- [x] Add the supplied garden, parking, rating and visitor-review information.
+- [x] Add the exact address, Plus Code, phone and weekly opening hours, with map and contact links.
+- [x] Keep the booking enquiry validated and prepare a WhatsApp handoff without claiming that a booking is stored.
+- [x] Keep the one-page route, responsive components and static prerender build.
+- [ ] Public launch — deferred at the user's direction; do not publish unless requested later.
